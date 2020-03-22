@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Kuailian Registry`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Farpotshket`,
+      summary: `, somos miembros del equipo Kuailian y queremos informar sobre este gran proyecto`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Registrate en Kuailian y emprende en el mundo de las Crypto-monedas`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `kylemathews`,
@@ -74,6 +74,12 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `kuailianregistry`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

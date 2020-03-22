@@ -8,6 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import Random from "../components/registryLinks"
 
 import { rhythm } from "../utils/typography"
 
@@ -63,6 +64,7 @@ const Bio = () => {
           You should follow him on Twitter
         </a>
       </p>
+      <Random />
     </div>
   )
 }

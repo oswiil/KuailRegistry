@@ -52,6 +52,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
+        backgroundColor: `#003366`,
+        boxShadow: `1px 1px 2em black`,
+        color: `white`,
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(24),
