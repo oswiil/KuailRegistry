@@ -12,9 +12,11 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
+  const baseUrl = `https://kuailianregistry.netlify.com`
   const disqusConfig = {
     identifier: post.id,
     title: post.frontmatter.title,
+    url: baseUrl + pageContext.slug,
   }
   return (
     <div style={{ backgroundColor: `#004C99` }}>
