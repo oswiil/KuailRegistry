@@ -19,14 +19,23 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
     url: baseUrl + pageContext.slug,
   }
   return (
-    <div style={{ backgroundColor: `#004C99` }}>
-      <Layout location={location} title={siteTitle}>
+    <div style={{ backgroundColor: `#003366`, boxShadow: "1px 1px 2em black" }}>
+      <Layout
+        location={location}
+        title={siteTitle}
+        style={{ boxShadow: "1px 1px 2em black" }}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article style={{}}>
-          <div style={{ backgroundColor: `#003366` }}>
+
+        <article>
+          <div
+            style={{
+              backgroundColor: `#003366`,
+            }}
+          >
             <header>
               <h1
                 style={{
@@ -55,7 +64,7 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
             <footer>
               <Bio />
               <CommentCount config={disqusConfig} placeholder={"..."} />
-              /* Post Contents */
+
               <Disqus config={disqusConfig} />
             </footer>
           </div>

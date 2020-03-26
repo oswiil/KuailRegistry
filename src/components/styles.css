@@ -1,0 +1,99 @@
+/**
+Clouds animations
+*/
+img.cloud {
+  position: absolute;
+  margin-top: 200px;
+}
+img.cloud1 {
+  float: right;
+  margin-top: 900px;
+  margin-right: 100px;
+  width: 200px;
+}
+/**
+  Registry-button
+
+*/
+button.registry-button {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(to bottom, #009fff, #ec2f4b);
+  margin: 0 auto;
+  width: 40%;
+  height: 80px;
+  display: flex;
+}
+
+/**
+ANIMATED DIV
+*/
+.body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  background: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.card1 {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  min-width: 60ch;
+  min-height: 60ch;
+  width: 45vw;
+  height: 45vw;
+  max-width: 100ch;
+  max-height: 100ch;
+  background-image: url(/static/Clouds.png);
+}
+
+/**
+Redes Sociales 
+*/
+.social-share-box {
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+.social-share-link a {
+  margin-top: 10%;
+  overflow: hidden;
+  padding: 40px 0px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.colorFace:hover {
+  background-color: rgb(1, 66, 207);
+  border-radius: 2px;
+}
+.colorTwitter:hover {
+  background-color: rgb(51, 131, 250);
+  border-radius: 20%;
+}
+.colorMail:hover {
+  background-color: rgb(175, 60, 45);
+  border-radius: 20%;
+}
+.colorLink:hover {
+  background-color: rgb(45, 25, 226);
+  border-radius: 20%;
+}
+.social-share-box a {
+  margin-right: 20px;
+}

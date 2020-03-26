@@ -8,14 +8,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import Random from "../components/registryLinks"
-
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/fpkt2.png/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
@@ -42,6 +40,7 @@ const Bio = () => {
       style={{
         display: `flex`,
         marginBottom: rhythm(2.5),
+        color: "white",
       }}
     >
       <Image
@@ -64,7 +63,6 @@ const Bio = () => {
           You should follow him on Twitter
         </a>
       </p>
-      <Random />
     </div>
   )
 }

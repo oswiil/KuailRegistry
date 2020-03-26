@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Kuailian Registry`,
+    title: `Como Registrarse`,
     author: {
       name: `Farpotshket`,
       summary: `, somos miembros del equipo Kuailian y queremos informar sobre este gran proyecto`,
