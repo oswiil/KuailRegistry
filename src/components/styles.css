@@ -3,7 +3,6 @@ Biografia
 */
 div.bio {
   margin-top: 500px;
-  z-index: +1;
 
   float: center;
   margin: 0 auto;
@@ -12,28 +11,6 @@ div.bio {
   color: white;
 }
 
-/**
-Clouds animations
-*/
-img.cloud {
-  position: absolute;
-  margin-top: 200px;
-  float: right;
-}
-.card1 {
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  will-change: transform;
-  min-width: 60ch;
-  min-height: 60ch;
-  width: 45vw;
-  height: 45vw;
-  max-width: 100ch;
-  max-height: 100ch;
-  background-image: url(/static/Clouds.png);
-}
 /**
 BACKGROUND VIDEO
 */
@@ -145,4 +122,32 @@ Redes Sociales
 }
 .social-share-box a {
   margin-right: 20px;
+}
+
+@media (max-width: 5000px) {
+  @media (max-width: 1500px) {
+  }
+
+  @media (max-width: 900px) {
+    div.bio {
+      margin-top: 200px;
+    }
+    button.registryButton {
+      margin-top: 100%;
+      margin-bottom: 200px;
+      padding: 20px 20px;
+    }
+    #myVideo {
+      width: fit-content;
+      margin-top: 0;
+      overflow-x: hidden;
+    }
+    div.header h1 {
+      font-size: 25px;
+      display: inline-block;
+      overflow: hidden;
+
+      overflow-x: hidden;
+    }
+  }
 }

@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Como Registrarse`,
+    title: ``,
     author: {
       name: `Farpotshket`,
       summary: `, somos miembros del equipo Kuailian y queremos informar sobre este gran proyecto`,
     },
     description: `Registrate en Kuailian y emprende en el mundo de las Crypto-monedas`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://www.kuailianregistry.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Farpotshket`,
     },
   },
   plugins: [

@@ -25,9 +25,11 @@ const BlogIndex = ({ data, location }) => {
   }))
   return (
     <div className="background-index">
-      <video id="myVideo" autoPlay loop muted>
-        <source src="presentacion.mp4" type="video/mp4" />
-      </video>
+      <div className="background-video">
+        <video id="myVideo" autoPlay loop muted>
+          <source src="presentacion.mp4" type="video/mp4" />
+        </video>
+      </div>
       <a href="https://kuailiandp.com">
         <img
           src="/KuaiLogo.png"

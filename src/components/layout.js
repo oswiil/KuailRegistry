@@ -54,8 +54,8 @@ const Layout = ({ location, title, children }) => {
     <div
       style={{
         color: `white`,
-        marginLeft: `auto`,
-        marginRight: `auto`,
+        margin: `0 auto`,
+        marginRight: ` 0 auto`,
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
