@@ -37,9 +37,12 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   return (
     <div
+      className="bio"
       style={{
+        margin: "0 auto",
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginTop: rhythm(2.5),
+        marginBottom: rhythm(3.5),
         color: "white",
       }}
     >

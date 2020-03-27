@@ -1,6 +1,7 @@
-import React from "react"
-
+import React, { Component } from "react"
+import "../components/styles.css"
 import { useSpring, animated, config } from "react-spring"
+
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
   (x - window.innerWidth / 2) / 20,
@@ -22,6 +23,7 @@ function Random() {
     window.location.href = ranpath
     console.log(ranpath)
   }
+
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
 
@@ -31,36 +33,24 @@ function Random() {
       friction: 25,
     },
   }))
+
   return (
-    <animated.div
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{
-        transform: props.xys.interpolate(trans),
-      }}
-    >
-      <div className="registryButton">
+    <div className="background-register">
+      <animated.div
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+        style={{
+          transform: props.xys.interpolate(trans),
+        }}
+      >
         <ul>
-          <button
-            className="registry_button"
-            onClick={() => Randomise()}
-            style={{
-              boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.4)",
-              borderRadius: `10px`,
-              color: "white",
-              backgroundColor: "transparent",
-              margin: "0 auto",
-              width: "40%",
-              height: "80px",
-              display: "flex",
-              marginBottom: "10%",
-            }}
-          >
+          <button className="registryButton" onClick={() => Randomise()}>
             Registrarse
           </button>
         </ul>
-      </div>
-    </animated.div>
+      </animated.div>
+    </div>
   )
 }
+
 export default Random

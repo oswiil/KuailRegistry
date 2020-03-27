@@ -1,6 +1,7 @@
 ---
 
 title: Registrarse en KuailianDP
+date: "2016-05-01T22:12:03.284Z"
 id: 2
 ---Si has visitado el Web oficial de [KuailianDP](https://kuailiandp.com/) Verás que la única manera de registrarse en Kuailian
 

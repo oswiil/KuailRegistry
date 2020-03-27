@@ -1,45 +1,24 @@
 /**
+Biografia
+*/
+div.bio {
+  margin-top: 500px;
+  z-index: +1;
+
+  float: center;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: rhythm(1.5);
+  color: white;
+}
+
+/**
 Clouds animations
 */
 img.cloud {
   position: absolute;
   margin-top: 200px;
-}
-img.cloud1 {
   float: right;
-  margin-top: 900px;
-  margin-right: 100px;
-  width: 200px;
-}
-/**
-  Registry-button
-
-*/
-button.registry-button {
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  color: white;
-  background: linear-gradient(to bottom, #009fff, #ec2f4b);
-  margin: 0 auto;
-  width: 40%;
-  height: 80px;
-  display: flex;
-}
-
-/**
-ANIMATED DIV
-*/
-.body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  background: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
 }
 .card1 {
   border-radius: 5px;
@@ -54,6 +33,76 @@ ANIMATED DIV
   max-width: 100ch;
   max-height: 100ch;
   background-image: url(/static/Clouds.png);
+}
+/**
+BACKGROUND VIDEO
+*/
+
+#myVideo {
+  position: absolute;
+  margin-top: 120px;
+  z-index: 0;
+  right: 0;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  min-width: 100%;
+  min-height: 100%;
+}
+/**
+  Registry-button
+
+*/
+
+button.registryButton {
+  padding: 10% 100px;
+
+  cursor: pointer;
+  background-color: rgb(2, 2, 2);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: white;
+
+  margin: 0 auto;
+  margin-top: 100%;
+  margin-bottom: 100px;
+  width: 50%;
+  height: 60px;
+  display: flex;
+}
+
+/**
+Index Style
+
+*/
+
+div.background-index {
+  background: linear-gradient(to top, #003366, #000000);
+  background-size: cover;
+  z-index: -1;
+}
+
+div.index-style {
+  display: block;
+
+  color: black;
+  background-color: rgb(255, 255, 255, 0.02);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+article.article-link-node:hover {
+  background-color: rgb(103, 173, 185);
+
+  border-radius: 10px;
+}
+
+/**
+ANIMATED DIV
+*/
+article.article-link-node {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border-radius: 10px solid;
 }
 
 /**
@@ -80,19 +129,19 @@ Redes Sociales
 }
 .colorFace:hover {
   background-color: rgb(1, 66, 207);
-  border-radius: 2px;
+  border-radius: 20px;
 }
 .colorTwitter:hover {
   background-color: rgb(51, 131, 250);
-  border-radius: 20%;
+  border-radius: 20px;
 }
 .colorMail:hover {
   background-color: rgb(175, 60, 45);
-  border-radius: 20%;
+  border-radius: 20px;
 }
 .colorLink:hover {
   background-color: rgb(45, 25, 226);
-  border-radius: 20%;
+  border-radius: 20px;
 }
 .social-share-box a {
   margin-right: 20px;

@@ -1,5 +1,6 @@
 ---
 title: Kuailian Descentralized Project
+date: "2014-05-01T22:12:03.284Z"
 description: Introducción a Kuialian DP. Formación en Blockchain y el mercado de Cryptomonedas (Ethereum). SmartContracts, inversión en la SmartPool mediante licencias software POS... (2 min de lectura) 📃💻🔒🚀.
 id: 1
 ---
