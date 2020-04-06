@@ -41,9 +41,8 @@ const Bio = () => {
       style={{
         margin: "0 auto",
         display: `flex`,
-        marginTop: rhythm(2.5),
-        marginBottom: rhythm(3.5),
         color: "white",
+        padding: "100px 5%",
       }}
     >
       <Image

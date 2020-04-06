@@ -5,10 +5,21 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      backgroundColor: "transparent",
+      backgroundColor: "black",
       display: "flex",
     }}
   >
+    <a href="https://kuailiandp.com">
+      <img
+        src="/KuaiLogo.png"
+        style={{
+          float: "right",
+          position: "absolute",
+
+          width: "150px",
+        }}
+      />
+    </a>
     <div
       className="header"
       style={{
@@ -18,10 +29,12 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1rem`,
       }}
     >
+      {" "}
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
+            marginTop: "20px",
             color: "white",
             textDecoration: `none`,
           }}

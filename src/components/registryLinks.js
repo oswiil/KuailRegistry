@@ -45,7 +45,7 @@ function Random() {
       >
         <ul>
           <button className="registryButton" onClick={() => Randomise()}>
-            Registrarse
+            Regístrate
           </button>
         </ul>
       </animated.div>

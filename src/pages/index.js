@@ -1,11 +1,12 @@
-import React from "react"
+import ReactPlayer from "react-player"
+import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import "../components/styles.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Random from "../components/registryLinks"
-
+import { rhythm, scale } from "../utils/typography"
 import { useSpring, animated } from "react-spring"
 
 const calc = (x, y) => [
@@ -14,7 +15,7 @@ const calc = (x, y) => [
   1.1,
 ]
 const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+  `perspective(10000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -24,26 +25,38 @@ const BlogIndex = ({ data, location }) => {
     xys: [0, 0, 1],
   }))
   return (
-    <div className="background-index">
-      <div className="background-video">
-        <video id="myVideo" autoPlay loop muted>
-          <source src="presentacion.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <a href="https://kuailiandp.com">
-        <img
-          src="/KuaiLogo.png"
-          style={{ position: "absolute", marginLeft: "3%", marginTop: "3%" }}
-        />
-      </a>
-      <Layout location={location} title={siteTitle} className="layout">
-        <SEO title="All posts" />
+    <Layout location={location} title={siteTitle} className="layout">
+      <SEO title="All posts" />
+      <div
+        className="video_player"
+        style={{
+          padding: `${rhythm(2)} `,
+          marginTop: 0,
+          backgroundImage:
+            "radial-gradient(farthest-corner at 45px 45px , #FF0000 0%, #0000FF 100%)",
+        }}
+      >
+        <ReactPlayer
+          id="myVideo"
+          url="https://www.youtube.com/watch?v=gqw6rBEZjeU&t=18s"
+          volume={0.01}
+          playing={true}
+        ></ReactPlayer>
         <Random />
+      </div>
+
+      <div className="background-index">
         <div className="index_style">
           <Bio />
         </div>
 
-        <div className="post-column">
+        <div
+          className="post-column"
+          style={{
+            padding: "20px 5% ",
+            margin: "5%",
+          }}
+        >
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
@@ -57,11 +70,22 @@ const BlogIndex = ({ data, location }) => {
                   transform: props.xys.interpolate(trans),
                 }}
               >
-                <article className="article-link-node" key={node.fields.slug}>
+                <article
+                  className="article-link-node"
+                  key={node.fields.slug}
+                  style={{
+                    color: "black",
+                    padding: `${rhythm(1)} `,
+                    boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
+                  }}
+                >
                   <header>
                     <h3>
                       <Link
-                        style={{ boxShadow: `none`, color: `darkblue` }}
+                        style={{
+                          boxShadow: `none`,
+                          color: `darkblue`,
+                        }}
                         to={node.fields.slug}
                       >
                         {title}
@@ -81,8 +105,8 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

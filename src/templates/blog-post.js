@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
@@ -19,7 +18,12 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
     url: baseUrl + pageContext.slug,
   }
   return (
-    <div style={{ backgroundColor: `#003366`, boxShadow: "1px 1px 2em black" }}>
+    <div
+      style={{
+        backgroundColor: `#003366`,
+        boxShadow: "1px 1px 2em black",
+      }}
+    >
       <Layout
         location={location}
         title={siteTitle}
@@ -33,12 +37,15 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
         <article>
           <div
             style={{
-              backgroundColor: `#003366`,
+              backgroundColor: "white",
+              color: "black",
+              padding: "20px 10%",
             }}
           >
             <header>
               <h1
                 style={{
+                  color: "darkblue",
                   marginTop: rhythm(1),
                   marginBottom: 0,
                 }}
@@ -62,7 +69,6 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
               }}
             />
             <footer>
-              <Bio />
               <CommentCount config={disqusConfig} placeholder={"..."} />
 
               <Disqus config={disqusConfig} />

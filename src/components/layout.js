@@ -52,16 +52,15 @@ const Layout = ({ location, title, children }) => {
   }
   return (
     <div
+      className="layout"
       style={{
+        backgroundColor: "black",
         color: `white`,
         margin: `0 auto`,
         marginRight: ` 0 auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
       <Header siteTitle={"Kuailian Registry"} />
-      <header>{header}</header>
       <main>{children}</main>
 
       <footer>
