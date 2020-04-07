@@ -64,7 +64,7 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
 
       <footer>
-        <ul className="social-share-box">
+        <div className="social-share-box">
           <li className="social-share-link">
             <a href="https://www.google.com" className="colorFace">
               Facebook
@@ -80,15 +80,14 @@ const Layout = ({ location, title, children }) => {
               Mail
             </a>
           </li>
-          <li className="social-share-link">
-            <a href="https://www.google.com" className="colorLink">
-              Linkdin
-            </a>
-          </li>
-        </ul>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </div>
+        <div className="GatsbyCopyright">
+          <p>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </p>
+        </div>
       </footer>
     </div>
   )

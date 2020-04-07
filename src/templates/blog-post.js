@@ -39,7 +39,8 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
             style={{
               backgroundColor: "white",
               color: "black",
-              padding: "20px 10%",
+              padding: "10px 20%",
+              textJustify: "justify",
             }}
           >
             <header>
@@ -72,36 +73,36 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
               <CommentCount config={disqusConfig} placeholder={"..."} />
 
               <Disqus config={disqusConfig} />
+
+              <nav>
+                <ul
+                  style={{
+                    display: `flex`,
+                    flexWrap: `wrap`,
+                    justifyContent: `space-between`,
+                    listStyle: `none`,
+                    padding: 0,
+                  }}
+                >
+                  <li>
+                    {previous && (
+                      <Link to={previous.fields.slug} rel="prev">
+                        ← {previous.frontmatter.title}
+                      </Link>
+                    )}
+                  </li>
+                  <li>
+                    {next && (
+                      <Link to={next.fields.slug} rel="next">
+                        {next.frontmatter.title} →
+                      </Link>
+                    )}
+                  </li>
+                </ul>
+              </nav>
             </footer>
           </div>
         </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
       </Layout>
     </div>
   )

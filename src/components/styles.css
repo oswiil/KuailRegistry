@@ -26,7 +26,10 @@ BACKGROUND VIDEO
   Registry-button
 
 */
-
+.registryButton:hover {
+  background-color: transparent;
+  transition-duration: 1s;
+}
 button.registryButton {
   padding: 30px 100px;
 
@@ -64,6 +67,11 @@ article.article-link-node:hover {
   background-color: rgb(103, 173, 185);
 
   border-radius: 10px;
+  opacity: 1;
+  -webkit-transform: scale(1.09);
+  -ms-transform: scale(1.09);
+  transform: scale(1.09);
+  transition-duration: 1s;
 }
 
 /**
@@ -71,6 +79,7 @@ ANIMATED DIV
 */
 
 .article-article-link-node {
+  opacity: 0.2;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
@@ -82,43 +91,53 @@ ANIMATED DIV
 Redes Sociales 
 */
 .social-share-box {
-  background: black;
-  overflow: hidden;
+  padding-top: 40px;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: row;
   display: flex;
-  margin: 0 auto;
-
-  width: 50%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
 }
 .social-share-link a {
-  margin-top: 10%;
   overflow: hidden;
-  padding: 40px;
-  margin: 0 auto;
+  padding: 60px;
 
   text-decoration: none;
   color: inherit;
   font-size: 14px;
+  opacity: 0.5;
 }
 .colorFace:hover {
   background-color: rgb(1, 66, 207);
-  border-radius: 20px;
+  opacity: 1;
+  transition-duration: 1s;
 }
 .colorTwitter:hover {
   background-color: rgb(51, 131, 250);
-  border-radius: 20px;
+  opacity: 1;
+  transition-duration: 1s;
 }
 .colorMail:hover {
   background-color: rgb(175, 60, 45);
-  border-radius: 20px;
+  opacity: 1;
+  transition-duration: 1s;
 }
-.colorLink:hover {
-  background-color: rgb(45, 25, 226);
-  border-radius: 20px;
-}
+
 .social-share-box a {
   margin-right: 20px;
 }
 
+div.GatsbyCopyright p {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 0px;
+}
 @media (max-width: 5000px) {
   @media (max-width: 1500px) {
     .header h1,
@@ -128,6 +147,12 @@ Redes Sociales
   }
 
   @media (max-width: 900px) {
+    .social-share-link a {
+      padding: 0;
+      max-width: 30px;
+      margin: 0 auto;
+      margin-right: 2px;
+    }
     .registryButton {
       max-width: 40%;
       padding: 5px 10px;

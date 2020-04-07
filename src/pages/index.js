@@ -1,29 +1,26 @@
 import ReactPlayer from "react-player"
-import React, { Component } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 import "../components/styles.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Random from "../components/registryLinks"
-import { rhythm, scale } from "../utils/typography"
-import { useSpring, animated } from "react-spring"
+import { rhythm } from "../utils/typography"
+import { useTransition, animated } from "react-spring"
 
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1,
-]
-const trans = (x, y, s) =>
-  `perspective(10000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-
+/**
+ *
+ * @param {generarPost} param0
+ */
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-  }))
+  /**
+   * UseTransitions
+   */
+
   return (
     <Layout location={location} title={siteTitle} className="layout">
       <SEO title="All posts" />
@@ -61,47 +58,37 @@ const BlogIndex = ({ data, location }) => {
             const title = node.frontmatter.title || node.fields.slug
 
             return (
-              <animated.div
-                onMouseMove={({ clientX: x, clientY: y }) =>
-                  set({ xys: calc(x, y) })
-                }
-                onMouseLeave={() => set({ xys: [0, 0, 1] })}
+              <article
+                className="article-link-node"
+                key={node.fields.slug}
                 style={{
-                  transform: props.xys.interpolate(trans),
+                  color: "black",
+                  padding: `${rhythm(1)} `,
+                  boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
                 }}
               >
-                <article
-                  className="article-link-node"
-                  key={node.fields.slug}
-                  style={{
-                    color: "black",
-                    padding: `${rhythm(1)} `,
-                    boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
-                  }}
-                >
-                  <header>
-                    <h3>
-                      <Link
-                        style={{
-                          boxShadow: `none`,
-                          color: `darkblue`,
-                        }}
-                        to={node.fields.slug}
-                      >
-                        {title}
-                      </Link>
-                    </h3>
-                    <small>{node.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
+                <header>
+                  <h3>
+                    <Link
+                      style={{
+                        boxShadow: `none`,
+                        color: `darkblue`,
                       }}
-                    />
-                  </section>
-                </article>
-              </animated.div>
+                      to={node.fields.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </section>
+              </article>
             )
           })}
         </div>

@@ -28,9 +28,9 @@ function Random() {
     xys: [0, 0, 1],
 
     config: {
-      mass: 1,
-      tension: 300,
-      friction: 25,
+      mass: 10,
+      tension: 120,
+      friction: 10,
     },
   }))
 
@@ -45,7 +45,7 @@ function Random() {
       >
         <ul>
           <button className="registryButton" onClick={() => Randomise()}>
-            Regístrate
+            Regístrate Gratis
           </button>
         </ul>
       </animated.div>
