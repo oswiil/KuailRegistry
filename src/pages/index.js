@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Random from "../components/registryLinks"
 import { rhythm } from "../utils/typography"
-import { useTransition, animated } from "react-spring"
 
 /**
  *
@@ -16,10 +15,6 @@ import { useTransition, animated } from "react-spring"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-
-  /**
-   * UseTransitions
-   */
 
   return (
     <Layout location={location} title={siteTitle} className="layout">
@@ -51,44 +46,48 @@ const BlogIndex = ({ data, location }) => {
           className="post-column"
           style={{
             padding: "20px 5% ",
-            margin: "5%",
           }}
         >
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
             return (
-              <article
-                className="article-link-node"
-                key={node.fields.slug}
-                style={{
-                  color: "black",
-                  padding: `${rhythm(1)} `,
-                  boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
-                }}
-              >
-                <header>
-                  <h3>
-                    <Link
-                      style={{
-                        boxShadow: `none`,
-                        color: `darkblue`,
+              <div className="row">
+                <article
+                  className="article-link-node"
+                  key={node.fields.slug}
+                  style={{
+                    color: "black",
+                    padding: `${rhythm(1)} `,
+                    boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
+                    marginTop: "1%",
+                  }}
+                >
+                  <big style={{ float: "right" }}>{node.frontmatter.step}</big>
+                  <header>
+                    <h3>
+                      <Link
+                        style={{
+                          boxShadow: `none`,
+                          color: `darkblue`,
+                        }}
+                        to={node.fields.slug}
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
                       }}
-                      to={node.fields.slug}
-                    >
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
+                    />
+                  </section>
+                </article>
+              </div>
             )
           })}
         </div>
@@ -114,6 +113,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            step
             date(formatString: "MMMM DD, YYYY")
             title
             description

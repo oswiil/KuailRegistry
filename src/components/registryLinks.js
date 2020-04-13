@@ -41,6 +41,7 @@ function Random() {
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
           transform: props.xys.interpolate(trans),
+          overflowx: "hidden",
         }}
       >
         <ul>

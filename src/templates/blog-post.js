@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
             style={{
               backgroundColor: "white",
               color: "black",
-              padding: "10px 20%",
+              padding: "10px 10%",
               textJustify: "justify",
             }}
           >

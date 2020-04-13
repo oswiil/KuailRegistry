@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `Kuailian Register`,
     author: {
-      name: `Farpotshket`,
-      summary: `, somos miembros del equipo Kuailian y queremos informar sobre este gran proyecto`,
+      name: `Farpotshket.`,
+      summary: ` ¿Qué ofrece KuailianDP , como registrarse en la plataforma a y como usar sus servicios ?`,
     },
     description: `Registrate en Kuailian y emprende en el mundo de las Crypto-monedas`,
     siteUrl: `https://www.kuailianregistry.netlify.com/`,
@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-150665648-1`,
       },
     },
     `gatsby-plugin-feed`,

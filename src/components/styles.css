@@ -3,9 +3,7 @@ Biografia
 */
 div.bio {
   position: relative;
-
   background-color: black;
-
   color: white;
 }
 
@@ -19,7 +17,7 @@ BACKGROUND VIDEO
   z-index: 0;
   right: 0;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
 }
 /**
@@ -78,15 +76,6 @@ article.article-link-node:hover {
 ANIMATED DIV
 */
 
-.article-article-link-node {
-  opacity: 0.2;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  border-radius: 10px solid;
-}
-
 /**
 Redes Sociales 
 */
@@ -140,13 +129,20 @@ div.GatsbyCopyright p {
 }
 @media (max-width: 5000px) {
   @media (max-width: 1500px) {
-    .header h1,
-    #myVideo {
+    .header h1 {
       max-width: 100%;
     }
   }
 
   @media (max-width: 900px) {
+    #myVideo {
+      display: flex;
+
+      right: 0;
+      left: 0;
+
+      max-width: fit-content;
+    }
     .social-share-link a {
       padding: 0;
       max-width: 30px;
@@ -171,8 +167,7 @@ div.GatsbyCopyright p {
       padding: 0;
     }
 
-    .header h1,
-    #myVideo {
+    .header h1 {
       max-width: fit-content;
       padding: 0;
       margin: 0 auto;

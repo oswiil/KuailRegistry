@@ -1,11 +1,10 @@
 ---
 title: Comprar KUAIS desde COINBASE
+step: 3/3
 date: "2015-05-01T22:12:03.284Z"
-description: "Como hemos comentado, hay tantos otros exchange como quieras buscar; Wirex, Hotbix, Binance... En este ejemplo usaremos Coinbase"
-id: 3
----
 
-Los exchange sirven para enviar dinero, vender y comprar otras cryptomonedas.
+description: "Como hemos comentado, hay tantos otros exchange como quieras buscar; Wirex, Hotbix, Binance... En este ejemplo usaremos Coinbase"
+---Los exchange sirven para enviar dinero, vender y comprar otras cryptomonedas.
 Para adquirir licencias POS software necesitas operar con ETHEREUM. El método más facil es registrarte en un Crypto-Exchange, estos "bancos" sirven para comprar crypto con dinero Fiat (Euros, Dólares,Pesos,Soles...).
 
 ### Paso 1 Registrarse en Coinbase
