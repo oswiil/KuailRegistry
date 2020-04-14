@@ -57,7 +57,8 @@ const BlogIndex = ({ data, location }) => {
                   className="article-link-node"
                   key={node.fields.slug}
                   style={{
-                    color: "black",
+                    backgroundImage: "linear-gradient(-90deg,  #0000FF, black)",
+                    color: "white",
                     padding: `${rhythm(1)} `,
                     boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
                     marginTop: "1%",
@@ -69,7 +70,7 @@ const BlogIndex = ({ data, location }) => {
                       <Link
                         style={{
                           boxShadow: `none`,
-                          color: `darkblue`,
+                          color: `lightBlue`,
                         }}
                         to={node.fields.slug}
                       >

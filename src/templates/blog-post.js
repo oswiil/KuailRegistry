@@ -37,8 +37,8 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
         <article>
           <div
             style={{
-              backgroundColor: "white",
-              color: "black",
+              backgroundColor: "#2c2c38",
+              color: "white",
               padding: "10px 10%",
               textJustify: "justify",
             }}
@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
             <header>
               <h1
                 style={{
-                  color: "darkblue",
+                  color: "lightBlue",
                   marginTop: rhythm(1),
                   marginBottom: 0,
                 }}
@@ -63,7 +63,10 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
                 {post.frontmatter.date}
               </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            <section
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              style={{ textAlign: "justify" }}
+            />
             <hr
               style={{
                 marginBottom: rhythm(1),

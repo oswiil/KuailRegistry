@@ -145,6 +145,7 @@ ANIMATED DIV
 Redes Sociales || Footer
 */
 .social-share-box {
+  background-color: black;
   padding-top: 40px;
   box-sizing: border-box;
   -webkit-box-align: center;
