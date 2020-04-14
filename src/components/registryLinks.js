@@ -30,7 +30,7 @@ function Random() {
     config: {
       mass: 10,
       tension: 120,
-      friction: 10,
+      friction: 50,
     },
   }))
 
@@ -41,7 +41,6 @@ function Random() {
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
           transform: props.xys.interpolate(trans),
-          overflowx: "hidden",
         }}
       >
         <ul>

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import IndexPage from "../components/contact"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -13,13 +14,16 @@ const Header = ({ siteTitle }) => (
       <img
         src="/KuaiLogo.png"
         style={{
-          float: "right",
           position: "absolute",
-
-          width: "150px",
+          padding: "2%",
+          width: "200px",
         }}
       />
     </a>
+
+    <IndexPage />
+
+    <div className="contact-form"></div>
     <div
       className="header"
       style={{
