@@ -2,13 +2,10 @@
 Header Menu
 */
 
-div.soporte a {
+div.about {
+  right: 300px;
   position: absolute;
-  right: 70px;
-  margin-top: 30px;
-
-  color: inherit;
-  cursor: pointer;
+  padding-top: 2%;
 }
 /**
 Contact_form
@@ -23,28 +20,33 @@ div.Contact__title h3 {
 div.contact__form button,
 div.Contact__form {
   padding-top: 5%;
-  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  margin-top: 70px;
 
   font-family: sans-serif;
   position: absolute;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.9);
 }
+button.buttonsubmit,
 div.contact__form button,
 div.Contact__form input,
 div.Contact__form textarea {
-  width: 100%;
-
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: white;
+  background-size: cover;
   outline: none;
 
   padding: 10px;
-  margin: 4px 0;
-
+  margin: 0 auto;
+  margin-bottom: 0;
+  margin-top: 10px;
   border: 1px solid rgb(148, 148, 148);
   border-radius: 5px;
 
@@ -57,10 +59,10 @@ div.Contact__form textarea:focus {
   background-color: rgb(79, 173, 250);
 }
 button.buttonsubmit {
-  margin-bottom: 30%;
-  width: 100%;
-  background-color: transparent;
+  margin-bottom: 240px;
+  background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 /**
@@ -95,6 +97,7 @@ BACKGROUND VIDEO
 }
 button.registryButton {
   padding: 30px 100px;
+  z-index: 0;
 
   cursor: pointer;
   background-color: rgb(2, 2, 2);
@@ -113,7 +116,11 @@ Index Style
 */
 
 div.background-index {
-  background: #ffffff;
+  background-image: radial-gradient(
+    farthest-corner at 45px 45px,
+    #0000ff 0%,
+    #ff0000 100%
+  );
   margin: 0;
 }
 
@@ -125,9 +132,12 @@ div.index_style {
   min-width: 100%;
   min-height: 100%;
 }
+article.article-link-node {
+  opacity: 0.5;
+}
 
 article.article-link-node:hover {
-  background-color: rgb(103, 173, 185);
+  background-color: rgba(79, 173, 250, 0.658);
 
   border-radius: 10px;
   opacity: 1;
@@ -138,14 +148,23 @@ article.article-link-node:hover {
 }
 
 /**
-ANIMATED DIV
+BlogPost
 */
+button.forward:hover,
+button.back:hover {
+  background-color: rgba(255, 255, 255, 0.986);
 
+  border-radius: 10px;
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  transition-duration: 0.5s;
+}
 /**
 Redes Sociales || Footer
 */
 .social-share-box {
-  background-color: black;
   padding-top: 40px;
   box-sizing: border-box;
   -webkit-box-align: center;

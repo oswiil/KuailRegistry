@@ -33,6 +33,9 @@ const BlogIndex = ({ data, location }) => {
           url="https://www.youtube.com/watch?v=gqw6rBEZjeU&t=18s"
           volume={0.01}
           playing={true}
+          width={1000}
+          heigth={1000}
+          ligth={true}
         ></ReactPlayer>
         <Random />
       </div>
@@ -57,7 +60,8 @@ const BlogIndex = ({ data, location }) => {
                   className="article-link-node"
                   key={node.fields.slug}
                   style={{
-                    backgroundImage: "linear-gradient(-90deg,  #0000FF, black)",
+                    backgroundColor: "black",
+
                     color: "white",
                     padding: `${rhythm(1)} `,
                     boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.4)",
@@ -70,7 +74,8 @@ const BlogIndex = ({ data, location }) => {
                       <Link
                         style={{
                           boxShadow: `none`,
-                          color: `lightBlue`,
+                          color: `white`,
+                          outline: `black`,
                         }}
                         to={node.fields.slug}
                       >

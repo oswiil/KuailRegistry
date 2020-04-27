@@ -1,11 +1,17 @@
 import React from "react"
+import { useSpring, animated } from "react-spring"
 
 export default class IndexPage extends React.Component {
   state = {
+    content: true,
     name: "",
     email: "",
     phone: "",
     message: "",
+  }
+  displayContent = e => {
+    e.preventDefault()
+    this.setState({ content: !this.state.content })
   }
 
   handleInputChange = event => {
@@ -22,73 +28,68 @@ export default class IndexPage extends React.Component {
     alert(`Welcome ${this.state.name} ${this.state.message}!`)
   }
 
-  constructor() {
-    super()
-    this.state = {
-      showMe: false,
-    }
-  }
-  operation() {
-    this.setState({
-      showMe: true,
-    })
-  }
   render() {
     return (
       <div>
         <a
-          onClick={() => this.operation()}
+          onClick={this.displayContent}
           style={{
             position: "absolute",
             right: "70px",
             marginTop: "30px",
             color: "inherit",
             cursor: "pointer",
+            backgroundColor: "black",
           }}
         >
           Te asesoramos
         </a>
-        {this.state.showMe ? (
-          <div className="Contact__form">
-            <form method="post" action="#">
-              <label>
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Nombre"
-                  value={this.state.name}
-                  onChange={this.handleInputChange}
-                  required
-                />
-              </label>
-              <label>
-                <input
-                  name="email"
-                  type="email"
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                  placeholder="example@mail.com"
-                  required
-                />
-              </label>
-              <label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  cols="33"
-                  placeholder="message"
-                ></textarea>
-              </label>
-              <button
-                type="submit"
-                className="buttonsubmit"
-                onClick={!this.setState.showMe}
-              >
-                Submit
-              </button>{" "}
-            </form>
-          </div>
+        {!this.state.content ? (
+          <animated.div
+            from={{ opacity: 0, marginTop: -1000 }}
+            to={{ opacity: 1, marginTop: 0 }}
+          >
+            <div className="Contact__form">
+              <form method="post" action="#">
+                <label>
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Nombre"
+                    value={this.state.name}
+                    onChange={this.handleInputChange}
+                    required
+                  />
+                </label>
+                <label>
+                  <input
+                    name="email"
+                    type="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    placeholder="example@mail.com"
+                    required
+                  />
+                </label>
+                <label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    cols="33"
+                    placeholder="message"
+                  ></textarea>
+                </label>
+                <button
+                  type="submit"
+                  className="buttonsubmit"
+                  onClick={!this.state.content}
+                >
+                  Submit
+                </button>{" "}
+              </form>
+            </div>
+          </animated.div>
         ) : null}
       </div>
     )

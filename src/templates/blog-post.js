@@ -20,7 +20,7 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
   return (
     <div
       style={{
-        backgroundColor: `#003366`,
+        backgroundColor: `white`,
         boxShadow: "1px 1px 2em black",
       }}
     >
@@ -37,16 +37,16 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
         <article>
           <div
             style={{
-              backgroundColor: "#2c2c38",
-              color: "white",
-              padding: "10px 10%",
+              backgroundColor: "white",
+              color: "black",
+              padding: "100px 15%",
               textJustify: "justify",
             }}
           >
             <header>
               <h1
                 style={{
-                  color: "lightBlue",
+                  color: "black",
                   marginTop: rhythm(1),
                   marginBottom: 0,
                 }}
@@ -73,36 +73,47 @@ const BlogPostTemplate = ({ data, pageContext, location, config }) => {
               }}
             />
             <footer>
-              <CommentCount config={disqusConfig} placeholder={"..."} />
-
-              <Disqus config={disqusConfig} />
-
               <nav>
-                <ul
+                <div
                   style={{
                     display: `flex`,
                     flexWrap: `wrap`,
                     justifyContent: `space-between`,
-                    listStyle: `none`,
-                    padding: 0,
+                    marginBottom: "40px",
+                    padding: "20px",
                   }}
                 >
-                  <li>
+                  <button
+                    className="back"
+                    style={{
+                      paddingTop: "10px",
+                      borderRadius: "10px",
+                    }}
+                  >
                     {previous && (
                       <Link to={previous.fields.slug} rel="prev">
                         ← {previous.frontmatter.title}
                       </Link>
                     )}
-                  </li>
-                  <li>
+                  </button>
+                  <button
+                    className="forward"
+                    style={{
+                      paddingTop: "10px",
+                      borderRadius: "10px",
+                    }}
+                  >
                     {next && (
                       <Link to={next.fields.slug} rel="next">
                         {next.frontmatter.title} →
                       </Link>
                     )}
-                  </li>
-                </ul>
+                  </button>
+                </div>
               </nav>
+              <CommentCount config={disqusConfig} placeholder={"..."} />
+
+              <Disqus config={disqusConfig} />
             </footer>
           </div>
         </article>

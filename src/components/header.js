@@ -22,8 +22,9 @@ const Header = ({ siteTitle }) => (
     </a>
 
     <IndexPage />
-
-    <div className="contact-form"></div>
+    <div className="about">
+      <a href="www.webs.com">About</a>
+    </div>
     <div
       className="header"
       style={{
